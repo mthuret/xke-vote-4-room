@@ -37,7 +37,7 @@ const talkStyle = (talk) => {
 export const Slot = ({ period, talks, onClick, refreshSlot }) => (
   <div>
     <Paper style={paperStyle} zDepth={2}>
-      <List key={period} subheader={<HeaderSlot period={period} refreshSlot={refreshSlot} />}
+      <List className='talks' key={period} subheader={<HeaderSlot period={period} refreshSlot={refreshSlot} />}
             subheaderStyle={subHeaderListStyle}>
         {talks.map(talk =>
           <div key={talk.id}>
@@ -45,7 +45,8 @@ export const Slot = ({ period, talks, onClick, refreshSlot }) => (
                       onTouchTap={() => onClick(period, talk.id)}
                       onClick={() => onClick(period, talk.id)}
                       style={talkStyle(talk)}
-                      id='talk'
+                      id={'talk' + talk.id}
+                      className='talk'
                       primaryText={talk.text}
                       secondaryTextLines={2}
                       leftAvatar={
