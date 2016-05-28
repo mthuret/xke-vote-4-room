@@ -84,7 +84,7 @@
     "socket.io-client": "^1.4.5"
   },
   "devDependencies": {
-    "@kadira/storybook": "^1.17.2",
+    "@kadira/storybook": "^1.28.0",
     "babel-cli": "^6.5.1",
     "babel-core": "^6.3.17",
     "babel-eslint": "^5.0.0-beta6",
